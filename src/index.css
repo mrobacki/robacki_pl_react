@@ -2,6 +2,8 @@
   --color-brand-primary: #8fff86;
   --color-brand-secondary: #4d81ee;
 
+  --color-brand-primary50: #8fff8650;
+
   --body-bg-color: #020a13;
   --border-color: #494949;
   --border-style: solid;
@@ -15,12 +17,20 @@
   --border-color: #494949;
 
   --color-white: white;
+  --color-link-primary: white;
+  --color-link-secondary: var(--text-color-dark);
 
   /* sizes */
+  --font-size-default: 16px;
+  --font-size-small: 14px;
 
   --spacing: 0.25em;
   --radius: 0.25em;
   --bar-size: 40px;
+
+  /* typography */
+  --font-primary: "NeueMachina";
+  --font-secondary: "ObjectSans";
 }
 
 *,
@@ -34,8 +44,15 @@
 html,
 body {
   height: 100%;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: var(--font-primary), -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  font-size: var(--font-size-default);
   background-color: var(--body-bg-color);
   color: var(--text-color);
   line-height: 1.5;
+}
+
+a {
+  color: var(--color-link-primary);
+  text-decoration: none;
 }

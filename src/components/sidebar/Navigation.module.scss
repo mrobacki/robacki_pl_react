@@ -1,6 +1,12 @@
-.nav {
-  display: flex;
-  flex-direction: column;
-  > li {
+ul {
+  &.nav {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    > li {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
   }
 }

@@ -1,9 +1,31 @@
 @use "@/styles/_mixins.scss" as m;
 
 footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-small);
+  color: var(--text-color-dark);
+
   border: var(--border-default-style);
   border-width: 1px 0 0 0;
   height: var(--bar-size);
 
   @include m.blur-bar();
+
+  .breadcrumbs {
+    margin-left: calc(var(--spacing) * 2);
+  }
+
+  .copyright {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: calc(var(--spacing) * 2);
+  }
 }
