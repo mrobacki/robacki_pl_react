@@ -1,5 +1,9 @@
+@use "@/styles/_mixins.scss" as m;
+
 footer {
   border: var(--border-default-style);
   border-width: 1px 0 0 0;
   height: var(--bar-size);
+
+  @include m.blur-bar();
 }

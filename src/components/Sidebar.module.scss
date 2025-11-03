@@ -1,3 +1,5 @@
+@use "@/styles/_mixins.scss" as m;
+
 sidebar {
   width: var(--bar-size);
   height: 100%;
@@ -5,4 +7,8 @@ sidebar {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: var(--border-default-style);
+  border-width: 0 1px 0 0;
+
+  @include m.blur-bar();
 }

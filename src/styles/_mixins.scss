@@ -1,0 +1,5 @@
+@mixin blur-bar {
+  background-color: rgba(2, 10, 19, 0.1);
+  backdrop-filter: blur(1px) saturate(160%);
+  -webkit-backdrop-filter: blur(1px) saturate(160%);
+}

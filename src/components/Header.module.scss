@@ -1,3 +1,5 @@
+@use "@/styles/_mixins.scss" as m;
+
 header {
   &.header {
     border: var(--border-default-style);
@@ -7,8 +9,6 @@ header {
     justify-content: center;
     height: var(--bar-size);
 
-    background-color: rgba(2, 10, 19, 0.1);
-    backdrop-filter: blur(1px) saturate(160%);
-    -webkit-backdrop-filter: blur(1px) saturate(160%);
+    @include m.blur-bar();
   }
 }
