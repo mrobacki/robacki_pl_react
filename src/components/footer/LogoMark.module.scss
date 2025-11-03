@@ -1,0 +1,14 @@
+.mark {
+  width: var(--bar-size);
+  height: var(--bar-size);
+  border: var(--border-default-style);
+  border-width: 0 1px 0 0;
+  background-color: #3663c46b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+}
