@@ -1,0 +1,41 @@
+:root {
+  --color-brand-primary: #8fff86;
+  --color-brand-secondary: #4d81ee;
+
+  --body-bg-color: #020a13;
+  --border-color: #494949;
+  --border-style: solid;
+  --border-width: 1px;
+
+  --border-default-style: var(--border-color) var(--border-style)
+    var(--border-width);
+
+  --text-color: #e2e8f0;
+  --text-color-dark: #9d9d9d;
+  --border-color: #494949;
+
+  --color-white: white;
+
+  /* sizes */
+
+  --spacing: 0.25em;
+  --radius: 0.25em;
+  --bar-size: 40px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
