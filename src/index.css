@@ -25,6 +25,10 @@
   --spacing: 0.25em;
   --radius: 0.25em;
   --bar-size: 40px;
+
+  /* typography */
+  --font-primary: "NeueMachina";
+  --font-secondary: "ObjectSans";
 }
 
 *,
@@ -38,7 +42,8 @@
 html,
 body {
   height: 100%;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: var(--font-primary), -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
   font-size: var(--font-size-default);
   background-color: var(--body-bg-color);
   color: var(--text-color);

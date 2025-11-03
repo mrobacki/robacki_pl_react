@@ -3,8 +3,8 @@ import styles from "./Sidebar.module.scss";
 
 export default function Sidebar() {
   return (
-    <sidebar className={styles.sidebar}>
+    <aside className={styles.sidebar}>
       <Navigation />
-    </sidebar>
+    </aside>
   );
 }
