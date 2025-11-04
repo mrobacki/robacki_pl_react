@@ -16,7 +16,7 @@ export default function Footer() {
         <Link to="/">Me :)</Link>
       </span>
       <Button to="/contact" className={styles.button}>
-        let’s-get-in-touch
+        Let’s collaborate [arrow]
       </Button>
     </footer>
   );
