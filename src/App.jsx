@@ -1,18 +1,34 @@
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Experiences from "./pages/Experiences";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import styles from "./App.module.scss";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-// import { useState } from "react";
+import LogoMark from "./components/footer/LogoMark";
+import Loader from "./components/Loader";
+
+import styles from "./App.module.scss";
 
 function App() {
   // const [isFull, setIsFull] = useState(true);
+  const location = useLocation();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000); // długość animacji (0.6s)
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   return (
     <div className="p-2">
@@ -22,6 +38,13 @@ function App() {
         <div className={styles.layoutBody}>
           <Sidebar />
           <div className={styles.pageContent}>
+            {loading && (
+              <div
+                className={`${styles.loader} ${loading ? styles.active : ""}`}
+              >
+                <Loader />
+              </div>
+            )}
             <Routes>
               <Route path="/" element={<Home />}></Route>
               <Route path="about" element={<About />}></Route>

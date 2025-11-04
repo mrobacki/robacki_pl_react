@@ -1,6 +1,8 @@
+import styles from "./Logo.module.scss";
+
 export default function Logo() {
   return (
-    <div className="logo">
+    <div className={`${styles.logo} {'logo'}`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="144"
@@ -17,7 +19,7 @@ export default function Logo() {
             fontFamily="PP Neue Machina"
             fontSize="16"
             letterSpacing="0em"
-            className="firstName"
+            className={`${styles.firstName} {'firstName}`}
           >
             <tspan x="0" y="13.0775">
               maciek
@@ -31,7 +33,7 @@ export default function Logo() {
             fontFamily="PP Neue Machina"
             fontSize="16"
             letterSpacing="0em"
-            className="lastName"
+            className={styles.lastName}
           >
             <tspan x="72.4931" y="13.28">
               robacki
@@ -46,7 +48,7 @@ export default function Logo() {
               fontFamily="PP Neue Machina"
               fontSize="16"
               letterSpacing="0em"
-              className="rightTag"
+              className={`${styles.rightTag} {'rightTag'}`}
             >
               <tspan x="134" y="12.89">
                 &gt;
@@ -60,7 +62,7 @@ export default function Logo() {
               fontFamily="PP Neue Machina"
               fontSize="16"
               letterSpacing="0em"
-              className="leftTag"
+              className={`${styles.leftTag} {'leftTag'}`}
             >
               <tspan x="63" y="13.0775">
                 &lt;
