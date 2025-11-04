@@ -12,7 +12,8 @@ export default function Footer() {
       </Link>
       <Breadcrumbs />
       <span className={styles.copyright}>
-        &copy; {new Date().getFullYear()} Maciek Robacki. All rights reserved.
+        &copy; Copyright {new Date().getFullYear()}. Made by{" "}
+        <Link to="/">Me :)</Link>
       </span>
       <Button>let’s-get-in-touch</Button>
     </footer>

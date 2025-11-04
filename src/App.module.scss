@@ -60,6 +60,7 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         position: relative;
         .loader {
           opacity: 0;
@@ -74,7 +75,7 @@ main {
           @include m.blur-loader();
           z-index: 100;
           pointer-events: none;
-          animation: fadeLoader 5s ease-in-out forwards;
+          animation: fadeLoader 1s ease-in-out forwards;
         }
       }
     }

@@ -55,4 +55,12 @@ body {
 a {
   color: var(--color-link-primary);
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: var(--color-link-secondary);
+}
+
+a:focus {
+  color: var(--color-brand-primary);
 }

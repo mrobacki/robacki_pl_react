@@ -2,12 +2,13 @@
 
 .loaderMark {
   svg {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     overflow: visible;
     path {
       &.slash {
-        transition: none;
+        transition: transform 0.5s ease-in-out;
+        // transition: none;
         transform-origin: 50% 50%;
       }
       &.tag-left,
@@ -20,16 +21,16 @@
     svg {
       path {
         &.slash {
-          transform: rotateZ(180deg);
-          transition: transform 0.5s ease;
+          animation: spin 0.8s ease-in-out;
+          fill: var(--color-brand-secondary);
         }
         &.tagLeft {
-          animation: tagLeftShift 0.8s ease-in-out;
-          fill: var(--color-brand-primary);
+          animation: tagLeftShift 1s ease-in-out;
+          fill: var(--text-color);
         }
         &.tagRight {
-          animation: tagRightShift 0.8s ease-in-out;
-          fill: var(--color-brand-primary);
+          animation: tagRightShift 1s ease-in-out;
+          fill: var(--text-color);
         }
       }
     }

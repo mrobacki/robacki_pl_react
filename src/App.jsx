@@ -10,7 +10,6 @@ import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import LogoMark from "./components/footer/LogoMark";
 import Loader from "./components/Loader";
 
 import styles from "./App.module.scss";
@@ -20,12 +19,38 @@ function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(false);
 
+  const [displayLocation, setDisplayLocation] = useState(location);
+  const [isFading, setIsFading] = useState(false);
+
+  const actualLocationName =
+    displayLocation.pathname === "/"
+      ? "home"
+      : displayLocation.pathname.split("/").filter(Boolean).at(-1);
+
+  // 1) Fade-out current route, then switch to the new one after 800ms
   useEffect(() => {
+    if (location.pathname !== displayLocation.pathname) {
+      setIsFading(true);
+      const t = setTimeout(() => {
+        setDisplayLocation(location);
+        setIsFading(false);
+      }, 300); // fade duration (ms)
+      return () => clearTimeout(t);
+    }
+  }, [location, displayLocation]);
+
+  useEffect(() => {
+    // Do not show route loader on home page
+    // if (location.pathname === "/") {
+    //   setLoading(false);
+    //   return;
+    // }
+
     setLoading(true);
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000); // długość animacji (0.6s)
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
@@ -38,21 +63,28 @@ function App() {
         <div className={styles.layoutBody}>
           <Sidebar />
           <div className={styles.pageContent}>
+            {actualLocationName && <h1>{`<${actualLocationName}>`}</h1>}
             {loading && (
               <div
                 className={`${styles.loader} ${loading ? styles.active : ""}`}
               >
-                <Loader />
+                <Loader active={loading} />
               </div>
             )}
-            <Routes>
-              <Route path="/" element={<Home />}></Route>
-              <Route path="about" element={<About />}></Route>
-              <Route path="/projects" element={<Projects />}></Route>
-              <Route path="/experiences" element={<Experiences />}></Route>
-              <Route path="/contact" element={<Contact />}></Route>
-              <Route path="*" element={<NotFound />}></Route>
-            </Routes>
+            <div
+              className={`${styles.routeContainer} ${
+                isFading ? styles.fadeOut : ""
+              }`}
+            >
+              <Routes location={displayLocation}>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="about" element={<About />}></Route>
+                <Route path="/projects" element={<Projects />}></Route>
+                <Route path="/experiences" element={<Experiences />}></Route>
+                <Route path="/contact" element={<Contact />}></Route>
+                <Route path="*" element={<NotFound />}></Route>
+              </Routes>
+            </div>
           </div>
         </div>
         <Footer />
