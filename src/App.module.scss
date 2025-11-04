@@ -75,7 +75,7 @@ main {
           @include m.blur-loader();
           z-index: 100;
           pointer-events: none;
-          animation: fadeLoader 1s ease-in-out forwards;
+          animation: fadeLoader 1.5s ease-in forwards;
         }
       }
     }

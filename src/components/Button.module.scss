@@ -1,0 +1,17 @@
+.button {
+  border: var(--border-default-style);
+  border-color: white;
+  background: none;
+  font-family: var(--font-primary);
+  color: white;
+  border-radius: var(--radius);
+  padding: 0 calc(var(--spacing) * 2);
+  height: calc(var(--bar-size) - (var(--spacing) * 3));
+  line-height: calc(var(--bar-size) - (var(--spacing) * 3));
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
