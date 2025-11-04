@@ -27,14 +27,14 @@ function App() {
       ? "home"
       : displayLocation.pathname.split("/").filter(Boolean).at(-1);
 
-  // 1) Fade-out current route, then switch to the new one after 800ms
+  // 1) Fade-out current route, then switch to the new one
   useEffect(() => {
     if (location.pathname !== displayLocation.pathname) {
       setIsFading(true);
       const t = setTimeout(() => {
         setDisplayLocation(location);
         setIsFading(false);
-      }, 300); // fade duration (ms)
+      }, 400);
       return () => clearTimeout(t);
     }
   }, [location, displayLocation]);
@@ -63,7 +63,7 @@ function App() {
         <div className={styles.layoutBody}>
           <Sidebar />
           <div className={styles.pageContent}>
-            {actualLocationName && <h1>{`<${actualLocationName}>`}</h1>}
+            {/* {actualLocationName && <h1>{`<${actualLocationName}>`}</h1>} */}
             {loading && (
               <div
                 className={`${styles.loader} ${loading ? styles.active : ""}`}
@@ -77,7 +77,10 @@ function App() {
               }`}
             >
               <Routes location={displayLocation}>
-                <Route path="/" element={<Home />}></Route>
+                <Route
+                  path="/"
+                  element={<Home actualLocationName={actualLocationName} />}
+                ></Route>
                 <Route path="about" element={<About />}></Route>
                 <Route path="/projects" element={<Projects />}></Route>
                 <Route path="/experiences" element={<Experiences />}></Route>
