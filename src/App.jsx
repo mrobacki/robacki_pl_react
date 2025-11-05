@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
+import BottomSection from "./pages/elements/BottomSection";
 
 import styles from "./App.module.scss";
 
@@ -72,7 +73,7 @@ function App() {
               </div>
             )}
             <div
-              className={`h100  container container_${actualLocationName} ${
+              className={`h100 container container_${actualLocationName} ${
                 styles.routeContainer
               } ${isFading ? styles.fadeOut : ""}`}
             >
@@ -87,6 +88,7 @@ function App() {
                 <Route path="/contact" element={<Contact />}></Route>
                 <Route path="*" element={<NotFound />}></Route>
               </Routes>
+              <BottomSection />
             </div>
           </div>
         </div>

@@ -14,6 +14,9 @@ export default function AboutMe() {
       <Box boxTitle={"where-i-work"} itemClassName="aboutLocation">
         tresc opisuaa
       </Box>
+      <Box boxTitle={"skills"} itemClassName="aboutSkills">
+        tresc opisuaa
+      </Box>
     </section>
   );
 }

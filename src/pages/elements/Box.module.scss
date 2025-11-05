@@ -5,10 +5,11 @@
   border-radius: var(--radius);
   background-color: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(4px);
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s ease;
   min-width: 50%;
   min-height: 150px;
   position: absolute;
+  overflow: hidden;
   .boxBar {
     @include blur-box-bar();
     padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
@@ -45,5 +46,11 @@
     width: 30%;
     min-width: auto;
     margin-top: 200px;
+  }
+  &.aboutSkills {
+    width: 30%;
+    min-width: auto;
+    top: 50%;
+    left: 50%;
   }
 }
