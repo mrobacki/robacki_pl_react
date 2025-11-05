@@ -7,12 +7,15 @@ ul {
     list-style-type: none;
     > li {
       &:not(:last-of-type) {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
       a {
         position: relative;
         display: flex;
         align-items: center;
+        justify-content: center;
+        width: var(--bar-size);
+        height: var(--bar-size);
         svg {
           path {
             transition: fill 0.3s ease-in-out;
@@ -21,7 +24,7 @@ ul {
         .tooltip {
           position: absolute;
           transition: opacity 0.3s ease-in-out;
-          left: 40px;
+          left: 60px;
           top: 50%;
           transform: translateY(-50%);
           pointer-events: none;

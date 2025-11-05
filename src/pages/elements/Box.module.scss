@@ -1,0 +1,49 @@
+@use "@/styles/mixins" as *;
+
+.box {
+  border: var(--border-color) var(--border-style) var(--border-width);
+  border-radius: var(--radius);
+  background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(4px);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  min-width: 50%;
+  min-height: 150px;
+  position: absolute;
+  .boxBar {
+    @include blur-box-bar();
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+    font-size: var(--font-size-small);
+  }
+  .boxContent {
+    padding: calc(var(--spacing) * 4);
+    color: white;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  // @for $i from 1 through 5 {
+  //   &:nth-child(#{$i}) {
+  //     left: (30% * ($i - 1));
+  //   }
+  // }
+
+  &.aboutIntro {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.aboutPortrait {
+    margin-top: 100px;
+    width: 30%;
+    min-width: auto;
+    right: 0;
+    left: auto;
+  }
+  &.aboutLocation {
+    width: 30%;
+    min-width: auto;
+    margin-top: 200px;
+  }
+}

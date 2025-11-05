@@ -1,3 +1,48 @@
+@use "@/styles/keyframes";
+
 .hero {
-  min-height: 100%;
+  text-align: center;
+  h1 {
+    &.hero {
+      &_micro {
+        color: var(--text-color-dark);
+        font-size: calc(var(--font-size-small) - 2);
+        margin-bottom: 40px;
+        font-family: var(--font-primary);
+      }
+    }
+  }
+  h2 {
+    &.hero {
+      &_title {
+        color: var(--text-color);
+        font-size: var(--font-size-xxxl);
+        margin-bottom: 40px;
+        .hero_label {
+        }
+      }
+    }
+  }
+
+  svg {
+    position: absolute;
+    bottom: calc(var(--spacing) * 8);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    path {
+      transition: fill 0.3s linear;
+      fill: var(--text-color-dark);
+      &.scrollWheel {
+        position: relative;
+        animation: scrollMarkBottomShift 2.6s ease-out infinite;
+      }
+    }
+    &:hover {
+      path {
+        fill: var(--color-brand-secondary);
+      }
+    }
+  }
 }

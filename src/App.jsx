@@ -72,9 +72,9 @@ function App() {
               </div>
             )}
             <div
-              className={`${styles.routeContainer} ${
-                isFading ? styles.fadeOut : ""
-              }`}
+              className={`h100  container container_${actualLocationName} ${
+                styles.routeContainer
+              } ${isFading ? styles.fadeOut : ""}`}
             >
               <Routes location={displayLocation}>
                 <Route
