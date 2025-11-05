@@ -12,7 +12,7 @@ export default function Footer() {
             <LogoMark />
             <Logo />
           </div>
-          <Navigation />
+          <Navigation showNavTooltip={true} />
         </div>
         <div className="bottomBottom">
           <span>privacy_link</span> <span>cookie-free website</span>

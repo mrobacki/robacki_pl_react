@@ -28,6 +28,11 @@
     fill: var(--text-color-dark);
     opacity: 1;
   }
+  30% {
+    transform: translateY(0);
+    fill: var(--text-color-dark);
+    opacity: 1;
+  }
   70% {
     transform: translateY(10px);
     fill: var(--text-color);

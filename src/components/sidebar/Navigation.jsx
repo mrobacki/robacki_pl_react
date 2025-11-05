@@ -2,10 +2,10 @@ import NavigationItem from "./NavigationItem";
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.scss";
 
-export default function Navigation() {
+export default function Navigation({ showNavTooltip }) {
   return (
     <ul className={styles.nav}>
-      <NavigationItem to="/" pageName="home">
+      <NavigationItem to="/" pageName="home" showNavTooltip={showNavTooltip}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -19,7 +19,11 @@ export default function Navigation() {
           />
         </svg>
       </NavigationItem>
-      <NavigationItem to="/about" pageName="about">
+      <NavigationItem
+        to="/about"
+        pageName="about"
+        showNavTooltip={showNavTooltip}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -40,7 +44,11 @@ export default function Navigation() {
           </defs>
         </svg>
       </NavigationItem>
-      <NavigationItem to="/projects" pageName="projects">
+      <NavigationItem
+        to="/projects"
+        pageName="projects"
+        showNavTooltip={showNavTooltip}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -61,7 +69,11 @@ export default function Navigation() {
           </defs>
         </svg>
       </NavigationItem>
-      <NavigationItem to="/experiences" pageName="experiences">
+      <NavigationItem
+        to="/experiences"
+        pageName="experiences"
+        showNavTooltip={showNavTooltip}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -79,7 +91,11 @@ export default function Navigation() {
           />
         </svg>
       </NavigationItem>
-      <NavigationItem to="/contact" pageName="contact">
+      <NavigationItem
+        to="/contact"
+        pageName="contact"
+        showNavTooltip={showNavTooltip}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
