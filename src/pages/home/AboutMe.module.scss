@@ -1,7 +1,10 @@
 .aboutMe {
-  position: relative;
+  padding-bottom: var(--spacing-vertical);
+  .boxes {
+    position: relative;
+  }
   > h1 {
     text-align: center;
-    margin: 100px 0;
+    margin: calc(var(--spacing-vertical) * 2) 0;
   }
 }

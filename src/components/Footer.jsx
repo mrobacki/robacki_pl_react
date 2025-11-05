@@ -14,9 +14,7 @@ export default function Footer() {
         &copy; Copyright {new Date().getFullYear()}. Made by{" "}
         <Link to="/">Me :)</Link>
       </span>
-      <Button to="/contact" className={styles.button}>
-        Let’s collaborate [arrow]
-      </Button>
+      <Button to="/contact">Let’s collaborate [arrow]</Button>
     </footer>
   );
 }

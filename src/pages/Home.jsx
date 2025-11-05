@@ -1,6 +1,7 @@
 import Hero from "./elements/Hero";
 import styles from "./elements/Hero.module.scss";
 import AboutMe from "./home/AboutMe";
+import Collaboration from "./home/Collaboration";
 
 export default function Home({ actualLocationName }) {
   return (
@@ -20,6 +21,7 @@ export default function Home({ actualLocationName }) {
         </a> */}
       </Hero>
       <AboutMe />
+      <Collaboration />
     </>
   );
 }

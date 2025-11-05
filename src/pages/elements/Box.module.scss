@@ -8,7 +8,7 @@
   transition: background-color 0.3s ease;
   min-width: 50%;
   min-height: 150px;
-  position: absolute;
+  position: relative;
   overflow: hidden;
   .boxBar {
     @include blur-box-bar();
@@ -31,26 +31,32 @@
   // }
 
   &.aboutIntro {
+    width: 50%;
     left: 50%;
     transform: translateX(-50%);
   }
 
   &.aboutPortrait {
-    margin-top: 100px;
+    position: absolute;
+    top: 100px;
     width: 30%;
     min-width: auto;
     right: 0;
     left: auto;
   }
   &.aboutLocation {
+    position: absolute;
     width: 30%;
     min-width: auto;
-    margin-top: 200px;
+    top: 200px;
   }
   &.aboutSkills {
     width: 30%;
     min-width: auto;
     top: 50%;
     left: 50%;
+  }
+  &.collaborationBox {
+    width: 100%;
   }
 }
