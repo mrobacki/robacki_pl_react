@@ -1,10 +1,27 @@
 import { Link } from "react-router-dom";
 import styles from "./Button.module.scss";
 
-export default function Button({ children, to }) {
+export default function Button({ children, to, additionalStyles, bigSize }) {
   return (
-    <Link to={to} className={styles.button}>
+    <Link
+      to={to}
+      className={`${styles.button} ${additionalStyles} ${
+        bigSize ? styles.buttonBig : ""
+      }`}
+    >
       {children}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+      >
+        <path
+          d="M3 7.5C2.72386 7.5 2.5 7.72386 2.5 8C2.5 8.27614 2.72386 8.5 3 8.5V8V7.5ZM14.3536 8.35355C14.5488 8.15829 14.5488 7.84171 14.3536 7.64645L11.1716 4.46447C10.9763 4.2692 10.6597 4.2692 10.4645 4.46447C10.2692 4.65973 10.2692 4.97631 10.4645 5.17157L13.2929 8L10.4645 10.8284C10.2692 11.0237 10.2692 11.3403 10.4645 11.5355C10.6597 11.7308 10.9763 11.7308 11.1716 11.5355L14.3536 8.35355ZM3 8V8.5H14V8V7.5H3V8Z"
+          fill="white"
+        />
+      </svg>
     </Link>
   );
 }

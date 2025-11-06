@@ -3,25 +3,41 @@
 .box {
   border: var(--border-color) var(--border-style) var(--border-width);
   border-radius: var(--radius);
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(4px);
   transition: background-color 0.3s ease;
   min-width: 50%;
   min-height: 150px;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   .boxBar {
     @include blur-box-bar();
-    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
     font-size: var(--font-size-small);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
   }
   .boxContent {
-    padding: calc(var(--spacing) * 4);
-    color: white;
+    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 4);
+    color: var(--text-color);
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    ol,
+    ul {
+      margin-left: 30px;
+      li {
+        &::marker {
+          color: var(--text-color-dark);
+        }
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.01);
   }
 
   // @for $i from 1 through 5 {
@@ -30,33 +46,78 @@
   //   }
   // }
 
+  &.boxLines {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100px;
+      background-color: red;
+      left: 50%;
+    }
+    &::before {
+      top: -101px;
+      background: #8fff86;
+      background: linear-gradient(
+        185deg,
+        rgba(143, 255, 134, 0) 0%,
+        rgba(143, 255, 134, 0.72) 100%
+      );
+    }
+    &::after {
+      bottom: -101px;
+      background: #8fff86;
+      background: linear-gradient(
+        0deg,
+        rgba(143, 255, 134, 0) 0%,
+        rgba(143, 255, 134, 0.72) 100%
+      );
+    }
+  }
+
   &.aboutIntro {
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
+    .boxContent {
+      padding-left: 30px;
+      padding-right: 40px;
+    }
   }
 
   &.aboutPortrait {
     position: absolute;
-    top: 100px;
-    width: 30%;
+    top: 200px;
+    width: calc(20% + 30px);
     min-width: auto;
-    right: 0;
+    right: 5%;
     left: auto;
+    .boxContent {
+      padding: 0;
+      img {
+        width: 100%;
+      }
+    }
   }
   &.aboutLocation {
     position: absolute;
-    width: 30%;
+    width: calc(25% + 20px);
     min-width: auto;
     top: 200px;
   }
   &.aboutSkills {
-    width: 30%;
+    width: 36%;
     min-width: auto;
-    top: 50%;
-    left: 50%;
+    margin-top: 50px;
+    left: 32%;
   }
   &.collaborationBox {
     width: 100%;
+  }
+
+  &.boxSkills {
   }
 }

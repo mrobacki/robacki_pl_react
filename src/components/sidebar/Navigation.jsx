@@ -5,7 +5,11 @@ import styles from "./Navigation.module.scss";
 export default function Navigation({ showNavTooltip }) {
   return (
     <ul className={styles.nav}>
-      <NavigationItem to="/" pageName="home" showNavTooltip={showNavTooltip}>
+      <NavigationItem
+        to="/"
+        pageName="strona główna"
+        showNavTooltip={showNavTooltip}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -20,8 +24,8 @@ export default function Navigation({ showNavTooltip }) {
         </svg>
       </NavigationItem>
       <NavigationItem
-        to="/about"
-        pageName="about"
+        to="/o-mnie"
+        pageName="o mnie"
         showNavTooltip={showNavTooltip}
       >
         <svg
@@ -45,8 +49,8 @@ export default function Navigation({ showNavTooltip }) {
         </svg>
       </NavigationItem>
       <NavigationItem
-        to="/projects"
-        pageName="projects"
+        to="/projekty"
+        pageName="wybrane projekty"
         showNavTooltip={showNavTooltip}
       >
         <svg
@@ -70,8 +74,8 @@ export default function Navigation({ showNavTooltip }) {
         </svg>
       </NavigationItem>
       <NavigationItem
-        to="/experiences"
-        pageName="experiences"
+        to="/eksperymenty"
+        pageName="eksperymenty"
         showNavTooltip={showNavTooltip}
       >
         <svg
@@ -92,8 +96,8 @@ export default function Navigation({ showNavTooltip }) {
         </svg>
       </NavigationItem>
       <NavigationItem
-        to="/contact"
-        pageName="contact"
+        to="/kontakt"
+        pageName="kontakt"
         showNavTooltip={showNavTooltip}
       >
         <svg

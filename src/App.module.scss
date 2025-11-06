@@ -63,8 +63,9 @@ main {
         flex-direction: column;
         position: relative;
         overflow-y: auto;
+        overflow-x: hidden;
         scroll-behavior: smooth;
-        scrollbar-gutter: stable both-edges;
+        scrollbar-gutter: stable right;
         -webkit-overflow-scrolling: touch;
 
         &::-webkit-scrollbar {
@@ -91,11 +92,11 @@ main {
 
         .loader {
           opacity: 0;
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
+          position: fixed;
+          top: calc((var(--spacing) * 2) + 1px + var(--bar-size));
+          right: calc((var(--spacing) * 2) + 1px);
+          bottom: calc((var(--spacing) * 2) + 1px + var(--bar-size));
+          left: calc((var(--spacing) * 2) + 1px + var(--bar-size));
           display: flex;
           align-items: center;
           justify-content: center;

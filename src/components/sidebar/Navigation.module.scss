@@ -33,6 +33,7 @@ ul {
           padding: var(--spacing) calc(var(--spacing) * 2);
           font-size: var(--font-size-small);
           color: black;
+          white-space: nowrap;
           &::before {
             content: "";
             position: absolute;

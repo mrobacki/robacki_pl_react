@@ -1,10 +1,17 @@
+@use "@/styles/globals";
+
 .aboutMe {
-  padding-bottom: var(--spacing-vertical);
   .boxes {
     position: relative;
   }
-  > h1 {
+  > h2 {
     text-align: center;
-    margin: calc(var(--spacing-vertical) * 2) 0;
+    margin: calc(var(--spacing-vertical) * 2) auto;
+    max-width: var(--heeader-max-width);
+    font-size: var(--font-size-xxl);
+  }
+  .buttonToAbout {
+    position: relative;
+    top: -150px;
   }
 }

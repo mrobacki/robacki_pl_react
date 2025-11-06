@@ -47,6 +47,32 @@
   flex-direction: column;
 }
 
+.space-bottom {
+  padding-bottom: var(--spacing-horiztonal);
+}
+
+.text-center {
+  text-align: center;
+}
+
 .highlight {
   color: var(--color-brand-primary);
+}
+.highlight2 {
+  color: var(--color-brand-secondary);
+}
+.highlight3 {
+  color: var(--color-brand-third);
+}
+.highlight4 {
+  color: var(--color-brand-fourth);
+}
+
+span {
+  &.small {
+    font-size: var(--font-size-small);
+  }
+  &.grey {
+    color: var(--text-color-dark);
+  }
 }

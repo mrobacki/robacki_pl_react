@@ -15,13 +15,20 @@
   h2 {
     &.hero {
       &_title {
+        max-width: var(--heeader-max-width);
         color: var(--text-color);
         font-size: var(--font-size-xxxl);
+        margin: 0 auto;
         margin-bottom: 40px;
         .hero_label {
         }
       }
     }
+  }
+
+  .heroSubtitle {
+    max-width: var(--heeader-intro-max-width);
+    margin: 0 auto;
   }
 
   svg {

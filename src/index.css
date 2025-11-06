@@ -1,6 +1,8 @@
 :root {
   --color-brand-primary: #8fff86;
   --color-brand-secondary: #4d81ee;
+  --color-brand-third: #e1b84f;
+  --color-brand-fourth: #e14f62;
 
   --color-brand-primary50: #8fff8650;
 
@@ -26,13 +28,16 @@
   --font-size-m: 20px;
   --font-size-l: 24px;
   --font-size-xl: 28px;
-  --font-size-xxl: 34px;
+  --font-size-xxl: 38px;
   --font-size-xxxl: 46px;
 
   --spacing: 0.25em;
   --spacing-vertical: 40px;
+  --spacing-horiztonal: 80px;
   --radius: 0.25em;
   --bar-size: 40px;
+  --heeader-max-width: 800px;
+  --heeader-intro-max-width: 600px;
 
   --container-max: 1280px;
 
@@ -47,6 +52,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
 }
 
 html,
@@ -82,4 +91,5 @@ h6 {
   font-weight: normal;
   font-family: var(--font-secondary), -apple-system, Segoe UI, Roboto, Arial,
     sans-serif;
+  color: var(--text-color);
 }

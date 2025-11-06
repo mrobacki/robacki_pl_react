@@ -1,0 +1,20 @@
+.skills {
+  .skillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    .skillItem {
+      width: 20%;
+      text-align: center;
+      margin-bottom: 20px;
+      img {
+        display: block;
+        margin: 0 auto;
+        opacity: 0.75;
+        min-height: 60px;
+      }
+    }
+  }
+  .buttonToContact {
+    margin: 30px auto;
+  }
+}
