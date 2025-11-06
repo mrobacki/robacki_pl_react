@@ -33,7 +33,7 @@
 
   --spacing: 0.25em;
   --spacing-vertical: 40px;
-  --spacing-horiztonal: 80px;
+  --spacing-horizontal: 80px;
   --radius: 0.25em;
   --bar-size: 40px;
   --heeader-max-width: 800px;
@@ -92,4 +92,8 @@ h6 {
   font-family: var(--font-secondary), -apple-system, Segoe UI, Roboto, Arial,
     sans-serif;
   color: var(--text-color);
+}
+
+p {
+  margin-bottom: 15px;
 }

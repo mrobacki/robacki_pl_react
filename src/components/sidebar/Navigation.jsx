@@ -2,9 +2,9 @@ import NavigationItem from "./NavigationItem";
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.scss";
 
-export default function Navigation({ showNavTooltip }) {
+export default function Navigation({ showNavTooltip, stylesFromOther }) {
   return (
-    <ul className={styles.nav}>
+    <ul className={`${styles.nav} ${stylesFromOther}`}>
       <NavigationItem
         to="/"
         pageName="strona główna"

@@ -1,15 +1,35 @@
+import styles from "./AboutIntro.module.scss";
+
 export default function AboutIntro() {
   return (
-    <>
-      I’m Maciej Robacki, a Frontend Web Developer & UX/UI Designer with over 10
-      years of experience in creating high-performance websites, e-commerce
-      platforms, and user interfaces. I’ve successfully delivered more than 400
-      projects for brands like CCC, Aflofarm, and the Ministry of Finance,
-      combining design precision with clean, maintainable code. My work blends
-      creativity with technical expertise — from pixel-perfect layouts to
-      responsive interfaces and user-focused design systems. I’m passionate
-      about building elegant digital experiences that look great and perform
-      flawlessly.
-    </>
+    <section className={styles.aboutIntro}>
+      <div className={styles.intro}>
+        <p>
+          Nazywam się Maciek Robacki — jestem{" "}
+          <span className="highlight">Frontend Web Developerem</span> i
+          projektantem UX/UI z ponad{" "}
+          <span className="highlight2">10-letnim doświadczeniem</span> w
+          tworzeniu wydajnych stron internetowych, platform e-commerce oraz
+          interfejsów użytkownika.
+        </p>
+        <p>
+          Zrealizowałem ponad <span className="highlight3">400 projektów</span>{" "}
+          dla marek takich jak{" "}
+          <span className="highlight5">
+            Aflofarm, Uniwerytet Rzeszowski, Ministerstwo Finansów, Colorland,
+            nPhoto etc.
+          </span>
+          , łącząc precyzję projektową z czystym i przemyślanym kodem.
+        </p>
+        <p>
+          Moja praca łączy{" "}
+          <span className="highlight4">kreatywność z wiedzą techniczną</span> —
+          od układów typu pixel-perfect po responsywne interfejsy i systemy
+          projektowania zorientowane na użytkownika. Pasjonuję się tworzeniem
+          eleganckich, nowoczesnych doświadczeń cyfrowych, które wyglądają
+          świetnie i działają bezbłędnie.
+        </p>
+      </div>
+    </section>
   );
 }

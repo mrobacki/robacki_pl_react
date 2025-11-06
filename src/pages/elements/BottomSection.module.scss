@@ -8,7 +8,44 @@
   right: 50%;
   margin-left: calc(-50vw + (var(--bar-size) / 2) + var(--spacing));
   margin-right: -50vw;
-  min-height: 80%;
   border: var(--border-default-style);
   border-width: 1px 0 0 0;
+  .bottomTop {
+    .bottomTopLeft {
+      display: flex;
+      align-items: center;
+      margin-bottom: var(--spacing-vertical);
+      .bottomMark {
+        svg {
+          width: 25px;
+          height: 25px;
+          margin-right: 20px;
+        }
+      }
+    }
+    .bottomNav {
+      align-items: flex-start;
+      margin-top: var(--spacing-horizontal);
+      margin-bottom: var(--spacing-horizontal);
+      li {
+        a {
+          white-space: nowrap;
+          width: auto;
+          color: var(--text-color-dark);
+          &:hover {
+            color: var(--text-color);
+          }
+        }
+      }
+    }
+  }
+  .bottomFooter {
+    font-size: var(--font-size-small);
+    .bottomSubnav {
+      display: flex;
+      a {
+        margin-right: 30px;
+      }
+    }
+  }
 }

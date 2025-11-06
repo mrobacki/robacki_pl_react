@@ -42,13 +42,16 @@
 .justify-content-center {
   justify-content: center;
 }
+.justify-content-between {
+  justify-content: space-between;
+}
 
 .direction-column {
   flex-direction: column;
 }
 
 .space-bottom {
-  padding-bottom: var(--spacing-horiztonal);
+  padding-bottom: var(--spacing-horizontal);
 }
 
 .text-center {
@@ -66,6 +69,10 @@
 }
 .highlight4 {
   color: var(--color-brand-fourth);
+}
+
+.highlight5 {
+  color: var(--text-color);
 }
 
 span {

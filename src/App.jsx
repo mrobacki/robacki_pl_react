@@ -75,7 +75,11 @@ function App() {
         <Header />
         <div className={styles.layoutBody}>
           <Sidebar />
-          <div className={styles.pageContent} ref={pageRef}>
+          <div
+            className={styles.pageContent}
+            ref={pageRef}
+            data-scroll-container
+          >
             {/* {actualLocationName && <h1>{`<${actualLocationName}>`}</h1>} */}
             {loading && (
               <div

@@ -109,15 +109,33 @@
     top: 200px;
   }
   &.aboutSkills {
-    width: 36%;
+    width: 42%;
     min-width: auto;
     margin-top: 50px;
-    left: 32%;
+    left: 25%;
   }
   &.collaborationBox {
     width: 100%;
   }
 
   &.boxSkills {
+  }
+
+  &.collaborationBox {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: var(--spacing-horizontal);
+    .boxContent {
+      padding-right: 70px;
+      padding-bottom: 50px;
+      padding-left: 70px;
+    }
+    h2 {
+      font-size: var(--font-size-xxl);
+      margin-bottom: var(--spacing-vertical);
+    }
+    p {
+      margin-bottom: var(--spacing-vertical);
+    }
   }
 }

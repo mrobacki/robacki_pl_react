@@ -44,7 +44,7 @@ export default function Skills({ showLines }) {
         <div className="text-center">
           <Button
             bigSize={true}
-            to="/contact"
+            to="/kontakt"
             additionalStyles={styles.buttonToContact}
           >
             porozmawiajmy-o-współpracy

@@ -11,8 +11,7 @@ export default function Footer() {
 
       <Breadcrumbs />
       <span className={styles.copyright}>
-        &copy; Copyright {new Date().getFullYear()}. Made by{" "}
-        <Link to="/">Me :)</Link>
+        <Link to="/">Github</Link>
       </span>
       <Button to="/contact">Let’s collaborate [arrow]</Button>
     </footer>
