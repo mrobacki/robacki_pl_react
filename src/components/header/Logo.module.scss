@@ -1,0 +1,35 @@
+@use "@/styles/fonts";
+@use "@/styles/keyframes";
+
+.logo {
+  svg {
+    overflow: visible;
+    text,
+    tspan {
+      font-family: "NeueMachina";
+      &.firstName,
+      &.leftTag,
+      &.rightTag {
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+  }
+  &:hover {
+    svg {
+      text,
+      tspan {
+        &.firstName {
+          animation: tagLeftShift 0.8s ease-in-out;
+        }
+        &.leftTag {
+          animation: tagLeftShift 0.8s ease-in-out;
+          fill: var(--color-brand-primary);
+        }
+        &.rightTag {
+          animation: tagRightShift 0.8s ease-in-out;
+          fill: var(--color-brand-primary);
+        }
+      }
+    }
+  }
+}

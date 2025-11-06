@@ -1,3 +1,6 @@
+@use "@/styles/keyframes";
+@use "@/styles/_mixins.scss" as m;
+
 :global(.p-2) {
   padding: calc(var(--spacing) * 2);
   height: 100dvh;
@@ -57,7 +60,63 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scrollbar-gutter: stable right;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: var(--border-color);
+          border-radius: 10px;
+          border: 2px solid var(--body-bg-color);
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+          background: var(--border-color);
+        }
+
+        /* Dla Firefoxa */
+        scrollbar-color: var(--border-color) transparent;
+        scrollbar-width: thin;
+
+        .loader {
+          opacity: 0;
+          position: fixed;
+          top: calc((var(--spacing) * 2) + 1px + var(--bar-size));
+          right: calc((var(--spacing) * 2) + 1px);
+          bottom: calc((var(--spacing) * 2) + 1px + var(--bar-size));
+          left: calc((var(--spacing) * 2) + 1px + var(--bar-size));
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include m.blur-loader();
+          z-index: 100;
+          pointer-events: none;
+          animation: fadeLoader 1s ease-in forwards;
+        }
       }
     }
   }
+}
+
+.routeContainer {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(-8px);
 }

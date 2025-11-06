@@ -1,14 +1,38 @@
+@use "@/styles/keyframes";
+
 .mark {
-  width: var(--bar-size);
-  height: var(--bar-size);
-  border: var(--border-default-style);
-  border-width: 0 1px 0 0;
-  background-color: #3663c46b;
   display: flex;
   align-items: center;
   justify-content: center;
   svg {
-    width: 25px;
-    height: 25px;
+    overflow: visible;
+    path {
+      &.slash {
+        transition: none;
+        transform-origin: 50% 50%;
+      }
+      &.tag-left,
+      &.tag-right {
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+  }
+  &:hover {
+    svg {
+      path {
+        &.slash {
+          transform: rotateZ(180deg);
+          transition: transform 0.5s ease;
+        }
+        &.tagLeft {
+          animation: tagLeftShift 0.8s ease-in-out;
+          fill: var(--color-brand-primary);
+        }
+        &.tagRight {
+          animation: tagRightShift 0.8s ease-in-out;
+          fill: var(--color-brand-primary);
+        }
+      }
+    }
   }
 }

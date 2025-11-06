@@ -1,6 +1,8 @@
 :root {
   --color-brand-primary: #8fff86;
   --color-brand-secondary: #4d81ee;
+  --color-brand-third: #e1b84f;
+  --color-brand-fourth: #e14f62;
 
   --color-brand-primary50: #8fff8650;
 
@@ -21,12 +23,23 @@
   --color-link-secondary: var(--text-color-dark);
 
   /* sizes */
-  --font-size-default: 16px;
   --font-size-small: 14px;
+  --font-size-default: 16px;
+  --font-size-m: 20px;
+  --font-size-l: 24px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 38px;
+  --font-size-xxxl: 46px;
 
   --spacing: 0.25em;
+  --spacing-vertical: 40px;
+  --spacing-horizontal: 80px;
   --radius: 0.25em;
   --bar-size: 40px;
+  --heeader-max-width: 800px;
+  --heeader-intro-max-width: 600px;
+
+  --container-max: 1280px;
 
   /* typography */
   --font-primary: "NeueMachina";
@@ -41,6 +54,10 @@
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 html,
 body {
   height: 100%;
@@ -48,11 +65,35 @@ body {
     sans-serif;
   font-size: var(--font-size-default);
   background-color: var(--body-bg-color);
-  color: var(--text-color);
+  color: var(--text-color-dark);
   line-height: 1.5;
 }
 
 a {
   color: var(--color-link-primary);
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: var(--color-link-secondary);
+}
+
+a:focus {
+  color: var(--color-brand-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-family: var(--font-secondary), -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--text-color);
+}
+
+p {
+  margin-bottom: 15px;
 }

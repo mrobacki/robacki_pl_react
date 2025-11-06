@@ -3,3 +3,15 @@
   backdrop-filter: blur(1px) saturate(160%);
   -webkit-backdrop-filter: blur(1px) saturate(160%);
 }
+
+@mixin blur-box-bar {
+  background-color: rgba(2, 10, 19, 0.6);
+  backdrop-filter: blur(1px) saturate(160%);
+  -webkit-backdrop-filter: blur(1px) saturate(160%);
+}
+
+@mixin blur-loader {
+  background-color: rgba(2, 10, 19, 1);
+  backdrop-filter: blur(1px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+}
