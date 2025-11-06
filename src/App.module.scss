@@ -45,6 +45,7 @@
 :global(.layoutFull) {
   height: 100%;
 }
+
 main {
   &.layout {
     border: var(--border-default-style);
@@ -52,6 +53,7 @@ main {
     width: 100%;
     position: relative;
     z-index: 1;
+    transition: all 1s ease-in-out;
     .layoutBody {
       height: calc(100% - (var(--bar-size) * 2));
       display: flex;
@@ -105,6 +107,18 @@ main {
           pointer-events: none;
           animation: fadeLoader 1s ease-in forwards;
         }
+      }
+    }
+    &.layoutSmall {
+      height: 40px;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      .layoutBody {
+        display: none;
       }
     }
   }
