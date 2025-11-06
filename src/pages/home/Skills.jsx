@@ -15,8 +15,6 @@ export default function Skills({ showLines }) {
       }
     );
 
-    console.log(images);
-
     // konwertujemy obiekt { path: module } -> tablicę ścieżek
     const loadedImages = Object.values(images).map((img) => img.default);
     setSkills(loadedImages);
@@ -31,13 +29,8 @@ export default function Skills({ showLines }) {
       >
         <div className={styles.skillsGrid}>
           {skills.map((src, i) => (
-            <div className={styles.skillItem}>
-              <img
-                key={i}
-                src={src}
-                alt={`skill-${i}`}
-                className="skill-icon"
-              />
+            <div className={styles.skillItem} key={i}>
+              <img src={src} alt={`skill-${i}`} className="skill-icon" />
             </div>
           ))}
         </div>

@@ -11,13 +11,12 @@ export default function About({ actualLocationName }) {
     <>
       <Hero actualLocationName={actualLocationName}>
         <h2 className={styles.hero_title}>
-          Let’s get to know the <span className="highlight">builder</span>{" "}
-          behind the code.
+          Za <span className="highlight">kodem</span> stoi człowiek — poznaj go.
         </h2>
-        <p className="hero_subtitle">
-          I’m Maciek — a creative front-end developer who blends aesthetics with
-          engineering. Here’s how I work, who I collaborate with, and the tools
-          I rely on to bring ideas to life.
+        <p className={styles.heroSubtitle}>
+          Zobacz, jak pracuję, z kim współtworzę i z jakich narzędzi korzystam,
+          by ożywiać pomysły. Razem możemy stworzyć coś, co naprawdę działa i
+          wygląda świetnie.
         </p>
         {/* <a href="#projects" className="btn btn-primary">
           View My Work
