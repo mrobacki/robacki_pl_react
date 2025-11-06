@@ -70,7 +70,7 @@ function App() {
 
   return (
     <div className="p-2">
-      {/* <div className={`${styles.wrapper} ${isFull && "size-full"}`}> */}
+      {/* <div className={`${styles.wrapper} ${isFull && "layoutFull"}`}> */}
       <main className={`${styles.layout} ${"layoutFull"}`}>
         <Header />
         <div className={styles.layoutBody}>
