@@ -2,10 +2,14 @@ import NavigationItem from "./NavigationItem";
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.scss";
 
-export default function Navigation() {
+export default function Navigation({ showNavTooltip, stylesFromOther }) {
   return (
-    <ul className={styles.nav}>
-      <NavigationItem to="/" pageName="home">
+    <ul className={`${styles.nav} ${stylesFromOther}`}>
+      <NavigationItem
+        to="/"
+        pageName="strona główna"
+        showNavTooltip={showNavTooltip}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -19,7 +23,11 @@ export default function Navigation() {
           />
         </svg>
       </NavigationItem>
-      <NavigationItem to="/about" pageName="about">
+      <NavigationItem
+        to="/o-mnie"
+        pageName="o mnie"
+        showNavTooltip={showNavTooltip}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -40,7 +48,11 @@ export default function Navigation() {
           </defs>
         </svg>
       </NavigationItem>
-      <NavigationItem to="/projects" pageName="projects">
+      <NavigationItem
+        to="/projekty"
+        pageName="wybrane projekty"
+        showNavTooltip={showNavTooltip}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -61,7 +73,11 @@ export default function Navigation() {
           </defs>
         </svg>
       </NavigationItem>
-      <NavigationItem to="/experiences" pageName="experiences">
+      <NavigationItem
+        to="/eksperymenty"
+        pageName="eksperymenty"
+        showNavTooltip={showNavTooltip}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -79,7 +95,11 @@ export default function Navigation() {
           />
         </svg>
       </NavigationItem>
-      <NavigationItem to="/contact" pageName="contact">
+      <NavigationItem
+        to="/kontakt"
+        pageName="kontakt"
+        showNavTooltip={showNavTooltip}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"

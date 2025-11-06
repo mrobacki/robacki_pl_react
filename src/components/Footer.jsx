@@ -7,17 +7,13 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <Link to="/">
-        <LogoMark />
-      </Link>
+      <LogoMark stylesFromOther={styles.markFooter} />
+
       <Breadcrumbs />
       <span className={styles.copyright}>
-        &copy; Copyright {new Date().getFullYear()}. Made by{" "}
-        <Link to="/">Me :)</Link>
+        <Link to="/">Github</Link>
       </span>
-      <Button to="/contact" className={styles.button}>
-        Let’s collaborate [arrow]
-      </Button>
+      <Button to="/contact">Let’s collaborate [arrow]</Button>
     </footer>
   );
 }

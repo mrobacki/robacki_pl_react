@@ -1,26 +1,29 @@
-export default function Home() {
+import Hero from "./elements/Hero";
+import styles from "./elements/Hero.module.scss";
+import AboutMe from "./home/AboutMe";
+import Skills from "./home/Skills";
+import Collaboration from "./home/Collaboration";
+
+export default function Home({ actualLocationName }) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      viewBox="0 0 32 32"
-      fill="none"
-    >
-      <g id="scrollIcon" class="scrollIcon">
-        <path
-          id="mouse"
-          d="M24 22C24 24.1217 23.1571 26.1566 21.6569 27.6569C20.1566 29.1571 18.1217 30 16 30C13.8783 30 11.8434 29.1571 10.3431 27.6569C8.84285 26.1566 8 24.1217 8 22V10C8 7.87827 8.84285 5.84344 10.3431 4.34315C11.8434 2.84285 13.8783 2 16 2C18.1217 2 20.1566 2.84285 21.6569 4.34315C23.1571 5.84344 24 7.87827 24 10V22ZM16 0C13.3478 0 10.8043 1.05357 8.92893 2.92893C7.05357 4.8043 6 7.34784 6 10V22C6 24.6522 7.05357 27.1957 8.92893 29.0711C10.8043 30.9464 13.3478 32 16 32C18.6522 32 21.1957 30.9464 23.0711 29.0711C24.9464 27.1957 26 24.6522 26 22V10C26 7.34784 24.9464 4.8043 23.0711 2.92893C21.1957 1.05357 18.6522 0 16 0Z"
-          fill="#E2E8F0"
-          class="mouse"
-        />
-        <path
-          id="scrollWheel"
-          d="M16.7071 6.29289C16.5196 6.10536 16.2652 6 16 6C15.7348 6 15.4804 6.10536 15.2929 6.29289C15.1054 6.48043 15 6.73478 15 7V11C15 11.2652 15.1054 11.5196 15.2929 11.7071C15.4804 11.8946 15.7348 12 16 12C16.2652 12 16.5196 11.8946 16.7071 11.7071C16.8946 11.5196 17 11.2652 17 11V7C17 6.73478 16.8946 6.48043 16.7071 6.29289Z"
-          fill="#E2E8F0"
-          class="scrollWheel"
-        />
-      </g>
-    </svg>
+    <>
+      <Hero actualLocationName={actualLocationName}>
+        <h2 className={styles.hero_title}>
+          <span className="hero_label">Cześć, jestem Maciek</span> —{" "}
+          <span className="highlight">kreatywny</span> frontend developer.
+        </h2>
+        <p className={styles.heroSubtitle}>
+          Zamieniam pomysły w wyjątkowe doświadczenia cyfrowe. Łączę design z
+          technologią i optymalizacją. Tworzę szybkie, estetyczne i skuteczne
+          strony internetowe.
+        </p>
+        {/* <a href="#projects" className="btn btn-primary">
+          View My Work
+        </a> */}
+      </Hero>
+      <AboutMe />
+      <Skills showLines={true} />
+      <Collaboration />
+    </>
   );
 }
