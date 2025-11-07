@@ -1,0 +1,29 @@
+.clients {
+  margin-bottom: var(--spacing-horizontal);
+  .hheader {
+    margin-bottom: var(--spacing-horizontal);
+    text-align: center;
+  }
+  .clientsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    .clientItem {
+      opacity: 0.75;
+      width: 23%;
+      margin: 1%;
+      display: flex;
+      align-items: center;
+      border: var(--border-color) var(--border-style) var(--border-width);
+      border-radius: var(--radius);
+      backdrop-filter: blur(4px);
+      transition: background-color 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.05);
+      min-height: 100px;
+      img {
+        display: block;
+        margin: 0 auto;
+        max-height: 70px;
+      }
+    }
+  }
+}
