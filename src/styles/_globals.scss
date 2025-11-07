@@ -83,3 +83,14 @@ span {
     color: var(--text-color-dark);
   }
 }
+
+.hheader {
+  text-align: center;
+}
+
+section h2 {
+  text-align: center;
+  margin: calc(var(--spacing-vertical) * 2) auto;
+  max-width: var(--heeader-max-width);
+  font-size: var(--font-size-xxl);
+}
