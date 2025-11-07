@@ -13,7 +13,7 @@ export default function Footer() {
       <span className={styles.copyright}>
         <Link to="/">Github</Link>
       </span>
-      <Button to="/contact">Let’s collaborate [arrow]</Button>
+      <Button to="/contact">porozmawiajmy</Button>
     </footer>
   );
 }

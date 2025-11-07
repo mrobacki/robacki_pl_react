@@ -1,0 +1,94 @@
+form {
+  margin-top: 20px;
+  display: grid;
+  gap: 16px;
+  .row {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
+  .field {
+    display: grid;
+    gap: 6px;
+    .label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .input {
+      border: 1px solid #d1d5db;
+      border-radius: 12px;
+      padding: 10px 12px;
+      outline: none;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      background: #fff;
+    }
+    .input:focus {
+      border-color: #9ca3af;
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.06);
+    }
+  }
+}
+
+.inputError {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.08);
+}
+.select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #9ca3af 50%),
+    linear-gradient(135deg, #9ca3af 50%, transparent 50%);
+  background-position: calc(100% - 16px) calc(1em + 2px),
+    calc(100% - 12px) calc(1em + 2px);
+  background-size: 4px 4px, 4px 4px;
+  background-repeat: no-repeat;
+}
+.textarea {
+  resize: vertical;
+}
+.file {
+  display: block;
+}
+.hint {
+  color: #6b7280;
+  font-size: 12px;
+}
+.consent {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  font-size: 14px;
+  align-items: start;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 4px;
+}
+.button {
+  background: #111827;
+  color: white;
+  border: 0;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.error {
+  color: #dc2626;
+  font-size: 12px;
+}
+.success {
+  color: #059669;
+  font-size: 14px;
+}
+.failure {
+  color: #dc2626;
+  font-size: 14px;
+}
+.honeypot {
+  display: none;
+}
