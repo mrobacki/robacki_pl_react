@@ -1,0 +1,12 @@
+.contact {
+  .contactIntro {
+    margin-bottom: var(--spacing-horizontal);
+    h2 {
+      margin-bottom: var(--spacing-vertical);
+    }
+  }
+  .contactForm {
+    max-width: var(--heeader-max-width);
+    margin: 0 auto;
+  }
+}
