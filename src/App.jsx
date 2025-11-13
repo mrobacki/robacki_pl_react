@@ -102,9 +102,19 @@ function App() {
                   path="o-mnie"
                   element={<About actualLocationName={actualLocationName} />}
                 ></Route>
-                <Route path="/projekty" element={<Projects />}></Route>
+                <Route
+                  path="/projekty"
+                  element={<Projects actualLocationName={actualLocationName} />}
+                ></Route>
+                <Route
+                  path="/projekty/:projectName"
+                  element={<Projects actualLocationName={actualLocationName} />}
+                ></Route>
                 <Route path="/eksperymenty" element={<Experiments />}></Route>
-                <Route path="/kontakt" element={<Contact />}></Route>
+                <Route
+                  path="/kontakt"
+                  element={<Contact actualLocationName={actualLocationName} />}
+                ></Route>
                 <Route path="*" element={<NotFound />}></Route>
               </Routes>
               <BottomSection />

@@ -11,9 +11,9 @@ export default function Footer() {
 
       <Breadcrumbs />
       <span className={styles.copyright}>
-        <Link to="/">Github</Link>
+        <a href="https://github.com/mrobacki/">Github</a>
       </span>
-      <Button to="/contact">porozmawiajmy</Button>
+      <Button to="/kontakt">porozmawiajmy</Button>
     </footer>
   );
 }
