@@ -5,6 +5,10 @@ export default function ProjectItem({
   projectTitle,
   projectDesc,
   projectStack,
+  projectYear,
+  projectClient,
+  projectServices,
+  projectEngagement,
 }) {
   return (
     <>
@@ -26,7 +30,40 @@ export default function ProjectItem({
         />
       </div>
 
-      {/* tutaj dopiszesz galerię, opis, case study itd */}
+      <div className={styles.projectDetails}>
+        <div className={styles.projectDetailsDesc}>
+          <div className={styles.detail}>
+            <strong>Klient:</strong>
+            <p className="highlight5">{projectClient}</p>
+          </div>
+          <div className={styles.detail}>
+            <strong>Zaangażowanie w projekt:</strong>
+            <p className="highlight5">{projectEngagement}</p>
+          </div>
+        </div>
+        <div className={styles.projectDetailsServices}>
+          <div className={styles.detail}>
+            <strong>Rok wdrożenia:</strong>
+            <p className="highlight5">{projectYear}</p>
+          </div>
+          <div className={styles.detail}>
+            <strong>Usługi:</strong>
+            <ul className={`${styles.services} highlight5`}>
+              {projectServices.map((service) => (
+                <li key={service}>{service}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.fullImage}>
+        <img
+          src={`/projects/${projectName}.webp`}
+          alt={projectTitle}
+          className={styles.projectItemFullImage}
+        />
+      </div>
     </>
   );
 }

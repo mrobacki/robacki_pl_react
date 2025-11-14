@@ -1,3 +1,5 @@
+@use "@/styles/breakpoints";
+
 .projectHeader {
   text-align: center;
   max-width: var(--heeader-max-width);
@@ -6,6 +8,9 @@
   h1 {
     font-size: var(--font-size-xxxl);
     margin: 50px 0 20px 0;
+    @include breakpoints.down(lg) {
+      font-size: var(--font-size-xxl);
+    }
   }
 
   .tech {
@@ -46,7 +51,7 @@
     left: 50%;
   }
   &::before {
-    top: -101px;
+    top: -99px;
     background: #8fff86;
     background: linear-gradient(
       185deg,
@@ -55,7 +60,7 @@
     );
   }
   &::after {
-    bottom: -101px;
+    bottom: -99px;
     background: #8fff86;
     background: linear-gradient(
       0deg,
@@ -63,6 +68,47 @@
       rgba(143, 255, 134, 0.72) 100%
     );
   }
+  img {
+    width: 100%;
+    border: var(--border-color) var(--border-style) var(--border-width);
+    border-radius: var(--radius);
+  }
+}
+
+.projectDetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  .projectDetailsDesc {
+    width: 60%;
+    flex-grow: 0;
+  }
+
+  .projectDetailsServices {
+    width: 25%;
+    ul {
+      list-style-type: none;
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .detail {
+    margin-bottom: 70px;
+    strong {
+      display: block;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.fullImage {
+  margin-bottom: 80px;
+  // height: 80vh;
+  // overflow-y: auto;
   img {
     width: 100%;
     border: var(--border-color) var(--border-style) var(--border-width);

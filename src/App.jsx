@@ -16,7 +16,6 @@ import BottomSection from "./pages/elements/BottomSection";
 import styles from "./App.module.scss";
 
 function App() {
-  // const [isFull, setIsFull] = useState(true);
   const location = useLocation();
   const [loading, setLoading] = useState(false);
 
@@ -29,7 +28,6 @@ function App() {
       ? "home"
       : displayLocation.pathname.split("/").filter(Boolean).at(-1);
 
-  // 1) Fade-out current route, then switch to the new one
   useEffect(() => {
     if (pageRef.current) {
       setTimeout(() => {
@@ -67,6 +65,10 @@ function App() {
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
+
+  useEffect(() => {
+    document.title = "Maciek Robacki - Frontend Developer";
+  }, []);
 
   return (
     <div className="p-2">
