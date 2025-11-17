@@ -1,3 +1,5 @@
+@use "@/styles/breakpoints" as *;
+
 .linkContainer {
   display: block;
   &:focus {
@@ -16,11 +18,18 @@
     display: flex;
     align-items: center;
     position: relative;
-
+    @include down(sm) {
+      flex-direction: column-reverse;
+      padding: 5px 5px 20px 5px;
+    }
     .projectItemDetails {
       width: 60%;
       padding-right: 5%;
       flex-shrink: 0;
+      @include down(sm) {
+        padding: 0 5px;
+        width: 100%;
+      }
       h3 {
         font-size: var(--font-size-xxxl);
       }
@@ -54,6 +63,9 @@
       border-radius: var(--radius);
       transition: transform 0.5s ease-in-out;
       transform-origin: right center;
+      @include down(sm) {
+        margin-bottom: 30px;
+      }
     }
 
     &:hover {

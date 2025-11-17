@@ -1,3 +1,5 @@
+@use "@/styles/breakpoints" as *;
+
 .bottom {
   background-color: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(4px);
@@ -15,6 +17,9 @@
       display: flex;
       align-items: center;
       margin-bottom: var(--spacing-vertical);
+      @include down(sm) {
+        justify-content: center;
+      }
       .bottomMark {
         svg {
           width: 25px;
@@ -27,6 +32,9 @@
       align-items: flex-start;
       margin-top: var(--spacing-horizontal);
       margin-bottom: var(--spacing-horizontal);
+      @include down(sm) {
+        align-items: center;
+      }
       li {
         a {
           white-space: nowrap;
@@ -41,10 +49,22 @@
   }
   .bottomFooter {
     font-size: var(--font-size-small);
+    @include down(sm) {
+      text-align: center;
+      flex-direction: column;
+    }
     .bottomSubnav {
       display: flex;
+      @include down(sm) {
+        flex-direction: column;
+      }
       a {
         margin-right: 30px;
+        @include down(sm) {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-right: 0;
+        }
       }
     }
   }

@@ -1,4 +1,5 @@
 @use "@/styles/keyframes";
+@use "@/styles/breakpoints" as *;
 
 .hero {
   text-align: center;
@@ -9,6 +10,9 @@
         font-size: calc(var(--font-size-small) - 2);
         margin-bottom: 40px;
         font-family: var(--font-primary);
+        @include down(sm) {
+          margin-bottom: 10px;
+        }
       }
     }
   }

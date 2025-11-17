@@ -10,6 +10,9 @@ export default function AboutMe() {
         technologię i wydajność
       </h2>
       <div className={styles.boxes}>
+        <Box boxTitle={"profilowe"} itemClassName="aboutPortrait">
+          <img src="me.webp" alt="avatar" />
+        </Box>
         <Box boxTitle={"o-mnie"} itemClassName="aboutIntro">
           <ol>
             <li>
@@ -49,30 +52,7 @@ export default function AboutMe() {
             </li>
           </ol>
         </Box>
-        <Box boxTitle={"profilowe"} itemClassName="aboutPortrait">
-          <img src="me.webp" alt="avatar" />
-        </Box>
-        <Box boxTitle={"w-liczbach"} itemClassName="aboutLocation">
-          <ol>
-            <li>
-              Ponad <span className="highlight">10 lat</span> doświadczenia w
-              web dev.
-            </li>
-            <li>
-              <span className="highlight2">Setki</span> dopracowanych, wydajnych
-              i estetycznych realizacji.
-            </li>
-            <li>
-              <span className="highlight3">100%</span> zaangażowania — od
-              pomysłu po wdrożenie i optymalizację.
-            </li>
-            <li>
-              <span className="highlight">Dziesiątki</span> partnerów i
-              zespołów, z którymi wspólnie tworzyłem skuteczne, nowoczesne
-              projekty.
-            </li>
-          </ol>
-        </Box>
+
         <Box boxTitle={"moje-umiejętności"} itemClassName="aboutSkills">
           <ol>
             <li>
@@ -117,6 +97,28 @@ export default function AboutMe() {
             </li>
           </ol>
         </Box>
+        <Box boxTitle={"w-liczbach"} itemClassName="aboutLocation">
+          <ol>
+            <li>
+              Ponad <span className="highlight">10 lat</span> doświadczenia w
+              web dev.
+            </li>
+            <li>
+              <span className="highlight2">Setki</span> dopracowanych, wydajnych
+              i estetycznych realizacji.
+            </li>
+            <li>
+              <span className="highlight3">100%</span> zaangażowania — od
+              pomysłu po wdrożenie i optymalizację.
+            </li>
+            <li>
+              <span className="highlight">Dziesiątki</span> partnerów i
+              zespołów, z którymi wspólnie tworzyłem skuteczne, nowoczesne
+              projekty.
+            </li>
+          </ol>
+        </Box>
+
         <Button
           to="o-mnie"
           bigSize={true}

@@ -8,9 +8,6 @@
   h1 {
     font-size: var(--font-size-xxxl);
     margin: 50px 0 20px 0;
-    @include breakpoints.down(lg) {
-      font-size: var(--font-size-xxl);
-    }
   }
 
   .tech {
@@ -19,6 +16,9 @@
     flex-wrap: wrap;
     margin-top: 50px;
     margin-bottom: 50px;
+    @include breakpoints.down(sm) {
+      margin-bottom: 0;
+    }
     span {
       font-size: var(--font-size-small);
       display: block;
@@ -79,13 +79,23 @@
   display: flex;
   justify-content: space-between;
   gap: 70px;
+  @include breakpoints.down(sm) {
+    flex-direction: column;
+    gap: 0;
+  }
   .projectDetailsDesc {
     width: 60%;
     flex-grow: 0;
+    @include breakpoints.down(sm) {
+      width: 100%;
+    }
   }
 
   .projectDetailsServices {
     width: 25%;
+    @include breakpoints.down(sm) {
+      width: 100%;
+    }
     ul {
       list-style-type: none;
       li {
@@ -98,6 +108,9 @@
 
   .detail {
     margin-bottom: 70px;
+    @include breakpoints.down(sm) {
+      margin-bottom: 40px;
+    }
     strong {
       display: block;
       margin-bottom: 25px;

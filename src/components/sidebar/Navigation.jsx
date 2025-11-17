@@ -73,7 +73,7 @@ export default function Navigation({ showNavTooltip, stylesFromOther }) {
           </defs>
         </svg>
       </NavigationItem>
-      <NavigationItem
+      {/* <NavigationItem
         to="/eksperymenty"
         pageName="eksperymenty"
         showNavTooltip={showNavTooltip}
@@ -94,7 +94,7 @@ export default function Navigation({ showNavTooltip, stylesFromOther }) {
             fill="white"
           />
         </svg>
-      </NavigationItem>
+      </NavigationItem> */}
       <NavigationItem
         to="/kontakt"
         pageName="kontakt"

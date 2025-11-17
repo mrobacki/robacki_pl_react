@@ -28,7 +28,7 @@ export default function Footer() {
             </span>
           </div>
           <div className={styles.bottomSubnav}>
-            <a href="">privacy_link</a> <span>cookie-free website</span>
+            <a href="">polityka_prywatności</a> <span>cookie_free website</span>
           </div>
         </div>
       </div>

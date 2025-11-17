@@ -1,4 +1,5 @@
 @use "@/styles/globals";
+@use "@/styles/breakpoints" as *;
 
 .aboutMe {
   .boxes {
@@ -7,5 +8,12 @@
   .buttonToAbout {
     position: relative;
     top: -150px;
+    @include down(md) {
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto;
+      margin-top: 40px;
+    }
   }
 }

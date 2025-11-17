@@ -1,3 +1,5 @@
+@use "@/styles/breakpoints" as *;
+
 form {
   margin: calc(var(--spacing-horizontal) / 2) auto var(--spacing-horizontal)
     auto;
@@ -5,8 +7,14 @@ form {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
+    @include down(sm) {
+      flex-direction: column;
+    }
     .field {
       width: 50%;
+      @include down(sm) {
+        width: 100%;
+      }
     }
   }
   .field {
