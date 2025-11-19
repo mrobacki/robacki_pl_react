@@ -1,16 +1,119 @@
-# React + Vite
+# robacki.pl – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio of **Me** – a creative frontend developer who blends design, engineering and performance into fast, modern web experiences.
 
-Currently, two official plugins are available:
+The site is built as a **single-page React application** with multiple routed views, smooth transitions, and animated SVG details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live site: **https://robacki.pl**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- 🧭 **Multi-page layout with routing**
+  - Home, About, Projects (with project details), Experiments, Contact, 404
+  - Route-based fading (`fadeOut` state) for smooth page transitions
+- 🎬 **Custom route loader**
+  - Global loader displayed on route change
+- 🧱 **Modular page sections**
+  - Reusable `Hero` component
+  - Sections: `AboutMe`, `Skills`, `Collaboration`, `BottomSection`
+- 🎨 **Animated SVG elements**
+  - SVG-based logo/accents with animation hooks
+- 🧾 **Layout with sidebar & footer**
+  - Persistent `Header`, `Sidebar`, `Footer`
+  - Scroll-to-top on navigation
+- 📐 **SCSS Modules & layout utilities**
+  - Component-scoped `.module.scss`
+  - Container-based layout with page-specific container classes
+- ⚠️ **404 Not Found page**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- **React**
+- **React Router DOM**
+- **Vite**
+- **SCSS Modules**
+- **Custom SVG assets**
+
+---
+
+## Project Structure (simplified)
+
+```
+src/
+  App.jsx              # Routing, loader, layout
+  App.module.scss
+
+  pages/
+    Home.jsx
+    About.jsx
+    Projects.jsx
+    Experiments.jsx
+    Contact.jsx
+    NotFound.jsx
+    elements/
+      Hero.jsx
+      BottomSection.jsx
+    home/
+      AboutMe.jsx
+      Skills.jsx
+      Collaboration.jsx
+
+  components/
+    Header.jsx
+    Sidebar.jsx
+    Footer.jsx
+    Loader.jsx
+```
+
+---
+
+## Getting Started
+
+### Install dependencies
+
+```
+npm install
+```
+
+### Development
+
+```
+npm run dev
+```
+
+### Production build
+
+```
+npm run build
+```
+
+---
+
+## Routing Overview
+
+- `/` – Home
+- `/o-mnie` – About
+- `/projekty` – Projects list
+- `/projekty/:projectName` – Single project
+- `/eksperymenty` – Experiments
+- `/kontakt` – Contact
+- `*` – 404
+
+---
+
+## Live Website
+
+👉 **https://robacki.pl**
+
+---
+
+## Contact
+
+If you’d like to work together or discuss a project:
+
+- Email: **maciek@robacki.pl**
+- Website: **https://robacki.pl**
