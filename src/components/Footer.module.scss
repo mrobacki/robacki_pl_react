@@ -38,5 +38,20 @@ footer {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin-left: 13px;
+    display: flex;
+    align-items: center;
+    a {
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+    }
+    svg {
+      height: 25px;
+      width: auto;
+      path {
+        fill: var(--text-color-dark);
+      }
+    }
   }
 }
